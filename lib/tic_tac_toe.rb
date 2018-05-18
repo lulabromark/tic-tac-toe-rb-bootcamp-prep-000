@@ -100,8 +100,8 @@ def over?(board)
 end
 
 def winner(board)
-  if winning = won?(board)
-    board[winning[0]]
+  if won?(board)
+    board[won?(board)[0]]
   end
 end
 
@@ -111,7 +111,7 @@ def play(board)
   end
 
   if winner(board)
-    puts "Congratulations #{board[winning[0]]}!"
+    puts "Congratulations #{board[won?(board)[0]]}!"
   elsif draw?(board)
 
 
