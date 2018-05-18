@@ -7,7 +7,7 @@ WIN_COMBINATIONS = [
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6]
-]
+].freeze
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -106,9 +106,7 @@ def winner(board)
 end
 
 def play(board)
-  until over?(board)
-    turn(board)
-  end
+  turn(board) until over?(board)
 
   if won?(board)
     winning = winner(board)
