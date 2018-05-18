@@ -110,13 +110,9 @@ def play(board)
     turn(board)
   end
 
-  if draw?(board)
+  if winner(board)
+    puts "Congratulations #{board[won?(board)[0]]}"
+    draw?(board)
     puts "Cat's Game!"
   end
-
-  # counter = 0
-  # while counter < 9
-  #   turn(board)
-  #   counter += 1
-  # end
 end
