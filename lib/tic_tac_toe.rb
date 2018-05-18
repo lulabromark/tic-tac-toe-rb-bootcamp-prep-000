@@ -100,8 +100,8 @@ def over?(board)
 end
 
 def winner(board)
-  if winning = won?(board)
-    board[winning[0]]
+  if won?(board)
+    board[won?(board)[0]]
   end
 end
 
